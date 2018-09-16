@@ -1,0 +1,16 @@
+$mob-w: ~"(min-width: 0)";
+$tablet-w: ~"(min-width: 768px)";
+$desk-w: ~"(min-width: 960px)";
+
+$retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+$retina-dpi: ~"(min-resolution: 144dpi)";
+$retina-ppx: ~"(min-resolution: 1.5dppx)";
+
+$mainFont: "MuseoSansCyrl";
+
+$fontSize: 16px;
+$lineHeight: 18px;
+$fontWeight: 400;
+
+$containerWidth: 1200px;

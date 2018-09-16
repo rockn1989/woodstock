@@ -1,0 +1,51 @@
+body,
+table {
+  font-family: $mainFont;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: all .3s linear;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+svg {
+  transition: fill .3s linear;
+}
+
+html.uk-touch {
+	body {
+		*.uk-invisible {
+			display: block !important;
+			opacity: 1 !important;
+			animation: none !important;
+			visibility: visible !important;
+		}
+		[class*=uk-animation-] {
+			@media $mob-w {
+				animation: none;
+			}
+			@media $tablet-w {
+				animation: none;
+			}
+		}
+	}
+}
+
+.uk-container {
+  margin: 0 auto;
+  max-width: $containerWidth;
+  @media $desk-w {
+    padding: 0 15px;
+  }
+}
+
