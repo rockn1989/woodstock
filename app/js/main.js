@@ -1,7 +1,6 @@
 'use strict';
 
-$(function() {
-
+$(function() {	
 
 	/*______ Показывать форму на мобильных устройствах ______*/
 
@@ -77,11 +76,11 @@ $(function() {
 
 	/*______ Отключение UIKIT анимации для мобильных устройств ______*/
 
-	UIkit.on('beforeready.uk.dom', function () {
+/*	UIkit.on('beforeready.uk.dom', function () {
 		if (UIkit.$win.width() < 767 && $('html').hasClass('uk-touch')) {
 			UIkit.$('[data-uk-scrollspy]').removeAttr('data-uk-scrollspy');
 		};
-	});
+	});*/
 
 
 	/*______ Полифил для Object-fit ______*/
@@ -91,6 +90,6 @@ $(function() {
 
 	/*______ Полифил для SVG ______*/
 
-	svg4everebody();
+	/*svg4everebody();*/
 
 });

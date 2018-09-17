@@ -1,0 +1,177 @@
+/* @mixin background-retina($filename, $fileformat) {
+	background-image: url("../img/${filename}$1x.${fileformat}");
+
+	$media: $retina-dpi, $retina-ppx {
+		background-image: url("../img/${filename}$2x.${fileformat}");
+	}
+}
+ */
+
+/*______ Main Fonts ______*/
+
+/*______ Montserrat ______*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*______ PlayfairDisplay ______*/
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Italic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url("../fonts/PlayfairDisplay/PlayfairDisplay-black.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*______ Default style ______*/
+
+body,
+table {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  -webkit-transition: fill .3s linear;
+  -o-transition: fill .3s linear;
+  -moz-transition: fill .3s linear;
+  transition: fill .3s linear;
+}
+
+html.uk-touch body *.uk-invisible {
+  display: block !important;
+  opacity: 1 !important;
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  animation: none !important;
+  visibility: visible !important;
+}
+
+.uk-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/*______ Elements ______*/
+
+h1,
+.title-h1 {
+  color: #000000;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 900;
+  font-family: "PlayfairDisplay";
+}
+
+h2,
+.title-h2 {
+  color: #000000;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  font-family: "PlayfairDisplay";
+}
+
+h3,
+.title-h3 {
+  color: #000000;
+  font-size: 28px;
+  line-height: 29px;
+  font-weight: 900;
+  font-family: "PlayfairDisplay";
+}
+
+h4,
+.title-h4 {
+  color: #000000;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  font-family: "PlayfairDisplay";
+}
+
+/*______ PAGE HEADER ______*/
+
+/* PAGE CONTENT */
+
+/*______ PAGE FOOTER ______*/
+
+/*______ SLIDERS ______*/
+
+/*______ MODALS WINDOWS ______*/
+
+/*______ FORMS ______*/
+
+@media (min-width: 0px) {
+  html.uk-touch body [class*=uk-animation-] {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .uk-container {
+    padding: 0 15px;
+  }
+}

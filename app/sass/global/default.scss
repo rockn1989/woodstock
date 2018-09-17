@@ -1,9 +1,12 @@
+/*______ Default style ______*/
+
 body,
 table {
   font-family: $mainFont;
   font-size: $fontSize;
   line-height: $lineHeight;
   font-weight: $fontWeight;
+  color: $mainColor;
 }
 
 * {
@@ -31,12 +34,9 @@ html.uk-touch {
 			visibility: visible !important;
 		}
 		[class*=uk-animation-] {
-			@media $mob-w {
+			@media (min-width: $mob-xs) {
 				animation: none;
-			}
-			@media $tablet-w {
-				animation: none;
-			}
+			};
 		}
 	}
 }
@@ -44,8 +44,12 @@ html.uk-touch {
 .uk-container {
   margin: 0 auto;
   max-width: $containerWidth;
-  @media $desk-w {
-    padding: 0 15px;
-  }
+  @media (min-width: $desk-w) {
+  	padding: 0 15px;
+  };
 }
 
+
+@media (min-width: $desk-w) {
+	
+};

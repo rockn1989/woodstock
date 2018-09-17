@@ -1,5 +1,11 @@
 
-.clearfix() {
+@mixin list-reset() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin clearfix() {
 	&::after {
 		content: "";
 		display: table;
@@ -7,7 +13,8 @@
 	}
 }
 
-.object-fit() {
+
+@mixin object-fit() {
 	object-fit: cover;
 	object-position: center;
 	width: 100%;
@@ -15,22 +22,21 @@
 	font-family: 'object-fit: cover; object-position: cover;';
 }
 
-.text-size($font-size, $line-height) {
+@mixin text-size($font-size, $line-height) {
 	font-size: $font-size;
 	line-height: $line-height;
 }
 
-.background-retina($filename, $fileformat) {
+/* @mixin background-retina($filename, $fileformat) {
 	background-image: url("../img/${filename}$1x.${fileformat}");
 
-	$media $retina-dpi, $retina-ppx {
+	$media: $retina-dpi, $retina-ppx {
 		background-image: url("../img/${filename}$2x.${fileformat}");
 	}
-
 }
+ */
 
-
-.icomoon() {
+@mixin icomoon() {
 	/* use !important to prevent issues with browser extensions that change fonts */
 	font-family: 'icomoon' !important;
 	speak: none;

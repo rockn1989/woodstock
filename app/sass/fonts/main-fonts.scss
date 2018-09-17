@@ -1,23 +1,55 @@
 /*______ Main Fonts ______*/
 
-/*
+/*______ Montserrat ______*/
+
 @font-face {
-	font-family: "MuseoSansCyrl";
-	src: url("../fonts/MuseoSans300/MuseoSansCyrl.eot");
-	src: url("../fonts/MuseoSans30/MuseoSansCyrl.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/MuseoSans300/MuseoSansCyrl.woff") format("woff"),
-	url("../fonts/MuseoSans300/MuseoSansCyrl.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 300;
+  font-family: 'Montserrat';
+  src:  url('../fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: "MuseoSansCyrl";
-	src: url("../fonts/MuseoSans500/MuseoSansCyrl.eot");
-	src: url("../fonts/MuseoSans500/MuseoSansCyrl.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/MuseoSans500/MuseoSansCyrl.woff") format("woff"),
-	url("../fonts/MuseoSans500/MuseoSansCyrl.ttf") format("truetype");
-	font-style: normal;
-	font-weight: 500;
+  font-family: 'Montserrat';
+  src:  url('../fonts/Montserrat/Montserrat-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
 }
-*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src:  url('../fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src:  url('../fonts/Montserrat/Montserrat-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+/*______ PlayfairDisplay ______*/
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src:  url('../fonts/PlayfairDisplay/PlayfairDisplay-Italic.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src:  url('../fonts/PlayfairDisplay/PlayfairDisplay-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src:  url('../fonts/PlayfairDisplay/PlayfairDisplay-black.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 900;
+}

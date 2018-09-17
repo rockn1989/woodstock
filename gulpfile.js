@@ -48,7 +48,7 @@ gulp.task("clean", function() {
 /*______ sass ______*/
 
 gulp.task("sass", function() {
-	return gulp.src("app/sass/main.sass")
+	return gulp.src("app/sass/main.scss")
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(autoprefixer(["last 15 version", "> 1%", 'firefox 14', "ie 8", "ie 7"], {cascade: true}))
@@ -62,9 +62,10 @@ gulp.task("sass", function() {
 /*______ sass production ______*/
 
 gulp.task("sass:build", function() {
-	return gulp.src("app/sass/main.sass")
+	return gulp.src("app/sass/main.scss")
 				.pipe(sass())
 				.pipe(autoprefixer(["last 15 version", "> 1%", 'firefox 14', "ie 8", "ie 7"], {cascade: true}))
+				.pipe(gcmq())
 				.pipe(gulp.dest("app/css"))
 				.pipe(rename("style.css"))
 				.pipe(gulp.dest("build/app/css"));
@@ -91,7 +92,7 @@ gulp.task("serve", ["templates", "sass", "svgstore"], function() {
 		notify: false
 	});
 
-	gulp.watch("app/sass/**/*.sass", ["sass"]);
+	gulp.watch("app/sass/**/*.scss", ["sass"], browserSync.reload);
 	gulp.watch("app/img/icon-svg/*.svg", ["svgstoreDev"]);
 	gulp.watch("app/img/icon-svg/*.svg", browserSync.reload);
 	gulp.watch("app/js/**/*.js", browserSync.reload);
