@@ -1,1 +1,8 @@
-/* PAGE CONTENT */
+/*______ Page Content ______*/
+
+.main-page {
+	height: 100vh;
+	background: url('../img/main-page-bg.png')  center no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
