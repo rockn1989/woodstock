@@ -1,7 +1,31 @@
 {% block content %}
 <header class="header">
-	<a href="/" class="logo">
-		<img src="img/logo.svg" alt="">
-	</a>
+	<div class="header-inner">
+		<div class="header-inner__left">
+			<a href="/" class="logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+			<nav class="navigation">
+				<ul>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Идеи для интерьера</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header-inner__right">
+			<div class="soc-links">
+				<a href="" class="icon-vk"></a>
+				<a href="" class="icon-inst"></a>
+				<a href="" class="icon-youtube"></a>
+			</div>
+			<div class="header-contacts">
+				<a href="tel:+74957904431" class="tel">+7 (495) 790-44-31</a>
+				<a href="#callback-modal" class="btn" uk-toggle>Заказать звонок</a>
+			</div>
+		</div>
+	</div>
 </header>
 {% endblock %}

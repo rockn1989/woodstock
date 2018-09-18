@@ -1,8 +1,68 @@
 /*______ Page Content ______*/
 
-.main-page {
+.first-screen {
+	position: relative;
+	padding: 0 5%;
 	height: 100vh;
 	background: url('../img/main-page-bg.png')  center no-repeat;
 	background-size: cover;
 	overflow: hidden;
+	z-index: 100;
+}
+
+.first-screen-inner {
+	position: relative;
+	padding-top: 10%;
+	padding-left: calc(73px + 2.5%);
+	@media (min-width: 1440px) {
+		padding-top: 21%;
+	}
+	h1 {
+		margin-bottom: 7%;
+		color: #ffffff;
+	}
+	.btn {
+		margin-bottom: 6%;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+	.arrow-down {
+		display: block;
+	}
+	.slogan {
+		position: absolute;
+		top: 85%;
+		right: 7px;
+		color: $gray;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 300;
+		text-transform: uppercase;
+		transform-origin: 100% center;
+		transform: rotate(-270deg);
+	}
+}
+
+
+.second-screen {
+	position: relative;
+	z-index: 101;
+	background-color: #ffffff;
+	&:before {
+		content: '';
+		position: absolute;
+		top: -30px;
+		left: 0;
+		display: block;
+		height: 30px;
+		width: 100%;
+		max-width: 1030px;
+		background-color: #ffffff;
+	}
+}
+
+.slideUp {
+	height: 100vh;
+	transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+	transform: translate3d(0, -100%, 0);
 }

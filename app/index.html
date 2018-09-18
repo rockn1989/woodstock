@@ -25,56 +25,97 @@
 
 <body>
 <header class="header">
-	<a href="/" class="logo">
-		<img src="img/logo.svg" alt="">
-	</a>
+	<div class="header-inner">
+		<div class="header-inner__left">
+			<a href="/" class="logo">
+				<img src="img/logo.svg" alt="">
+			</a>
+			<nav class="navigation">
+				<ul>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Идеи для интерьера</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header-inner__right">
+			<div class="soc-links">
+				<a href="" class="icon-vk"></a>
+				<a href="" class="icon-inst"></a>
+				<a href="" class="icon-youtube"></a>
+			</div>
+			<div class="header-contacts">
+				<a href="tel:+74957904431" class="tel">+7 (495) 790-44-31</a>
+				<a href="#callback-modal" class="btn" uk-toggle>Заказать звонок</a>
+			</div>
+		</div>
+	</div>
 </header>
 
 	
-	<section class="main-page"> 
-		<h1>Заголовок 1</h1>	
-		<h2>Заголовок 1</h2>
-		<h3>Заголовок 1</h3>
-		<h4>Заголовок 1</h4>
-		<a href="" class="btn">ЗАКАЗАТЬ ЗВОНОК</a>
-		<a href="" class="btn btn--think">Подробнее</a>
-		<button class="btn btn--black">рассчитать стоимость</button>
-		<ul>
-			<li>Мы производим мебель Мы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебельМы производим мебель</li>
-			<li>Мы производим мебель</li>
-			<li>Мы производим мебель</li>
-		</ul>
-		<ol>
-			<li>Мы производим мебель-1</li>
-			<li>Мы производим мебель-2</li>
-			<li>Мы производим мебель-3</li>
-		</ol>	
-		<blockquote>
-			Каждый фрагмент нашей мебели тщательно подбирается мастером для того, чтобы показать неповторимую естественную красоту волокон древесины.
-		</blockquote>
-		<p>
-			Мы производим мебель как из ценных пород дерева, так и из комбинированных материалов (стекло, камень, металл). Природа помогает приобрести индивидуальность каждому нашему изделию, а мы превращаем созданные ей заготовки в красивейшие и неповторимые изделия
-		</p>
-		<p>
-			Мы производим мебель как из ценных пород дерева, так и из комбинированных материалов (стекло, камень, металл). Природа помогает приобрести индивидуальность каждому нашему изделию, а мы превращаем созданные ей заготовки в красивейшие и неповторимые изделия
-		</p>
-		<div class="small-title">
-			«Мастерская Wood&Stone специализируется на изготовлении эксклюзивных столярных и кованых изделий. 
-		</div>
-	</section>
-
+	<div class="screens-wrapper">
+		<section class="first-screen"> 
+			<div class="first-screen-inner">
+				<h1>Создаем мебель <br> как произведение искуства</h1>
+				<div class="slogan">
+					ЭКСКЛЮЗИВНАЯ МЕБЕЛЬ ИЗ ДЕРЕВА И МЕТАЛА
+				</div>
+				<a href="" class="btn btn--think js-test">Каталог изделий</a>
+				<span class="arrow-down">
+					<img src="img/long-arrow-down.svg" alt="">
+				</span>
+			</div>
+		</section>
+		
+		<section class="second-screen">
+			<div class="uk-container">
+				<div class="catalog">
+					<div class="uk-grid">
+						<div class="uk-width-1-3">
+							<div class="catalog-nav" uk-sticky>
+								<ul class="nav-list">
+									<li><a href="#">Мебель для гостинной</a></li>
+									<li><a href="#">Мебель для спальни</a></li>
+									<li><a href="#">Кухоный гарнитур</a></li>
+									<li><a href="#">Мебель для кухни</a></li>
+									<li><a href="#">Мебель для ванной</a></li>
+									<li><a href="#">Мебель для каридора</a></li>
+									<li><a href="#">Лестницы</a></li>
+									<li><a href="#">Предметы Итерьера</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="uk-width-2-3">
+							<div class="catalog-content">
+								<div class="catalog-header">
+									<h1>Мебель для гостиной</h1>
+								</div>
+								<div class="catalog-body">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 
 
 <footer class="footer">
-	FOOTER TEXT
+	
 </footer>
 
 
 
-
-
-
-
+<div id="callback-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"></h2>
+        <button class="uk-modal-close" type="button"></button>
+    </div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>

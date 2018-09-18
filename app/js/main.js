@@ -93,3 +93,14 @@ $(function() {
 	/*svg4everebody();*/
 
 });
+
+
+$(function () {
+	$('.js-test').on('click', function(e){
+		e.preventDefault();
+		$('.second-screen').addClass('slideUp');
+		$('.second-screen').on('transitionrun', function() {
+			console.log('complete')
+		})
+	})
+});
