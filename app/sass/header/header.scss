@@ -3,13 +3,13 @@
 .header {
 	position: fixed;
 	width: 100%;
-	z-index: 999;
+	z-index: 200;
 	transition: all 1s ease;
 	&.small {
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		max-width: 1360px;
+		max-width: 1410px;
 		background-color: #ffffff;
 		.logo {
 			&:before {

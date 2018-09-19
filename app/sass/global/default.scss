@@ -44,8 +44,9 @@ html.uk-touch {
 .uk-container {
   margin: 0 auto;
   max-width: $containerWidth;
+  box-sizing: border-box;
   @media (min-width: $desk-w) {
-  	padding: 0 15px;
+  	padding: 0 25px;
   };
 }
 

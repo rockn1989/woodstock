@@ -98,10 +98,13 @@ $(function() {
 $(function () {
 	$('.js-test').on('click', function(e){
 		e.preventDefault();
-		$('.second-screen').addClass('slideUp');
-		$('.header').addClass('small');
-	})
-		$('.second-screen').on('transitionstart', function() {
-			$('.header').addClass('small');
-		})
+		var redirect = $(this).attr('href');
+		$('.first-screen').addClass('load');
+		$('.first-screen').on('transitionend', function () {
+			$(this).addClass('loaded');
+			setTimeout(function () {
+				window.location = redirect;
+			}, 1500)
+		});		
+	});
 });

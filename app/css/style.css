@@ -183,7 +183,10 @@ html.uk-touch body *.uk-invisible {
 
 .uk-container {
   margin: 0 auto;
-  max-width: 1160px;
+  max-width: 1210px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*______ Elements ______*/
@@ -419,12 +422,74 @@ p {
   background-color: #4d4c4c;
 }
 
+/*______ Preload ______*/
+
+.preloader {
+  position: relative;
+}
+
+.preloader:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -webkit-calc(100% - 30px);
+  top: -moz-calc(100% - 30px);
+  top: calc(100% - 30px);
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-25%);
+  -moz-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  transform: translateX(-25%);
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  z-index: 350;
+}
+
+.preloader:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent url("../img/ajax-loader.gif") center center no-repeat;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.preloader.load {
+  z-index: 350;
+}
+
+.preloader.load:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  top: 0;
+}
+
+.preloader.loaded:before {
+  opacity: 1;
+  z-index: 400;
+}
+
 /*______ PAGE HEADER ______*/
 
 .header {
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 200;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -435,7 +500,7 @@ p {
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 1360px;
+  max-width: 1410px;
   background-color: #ffffff;
 }
 
@@ -638,6 +703,10 @@ p {
 
 /*______ Page Content ______*/
 
+body.main-page {
+  overflow: hidden;
+}
+
 .first-screen {
   position: relative;
   padding: 0 5%;
@@ -647,6 +716,62 @@ p {
   background-size: cover;
   overflow: hidden;
   z-index: 100;
+}
+
+.first-screen:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -webkit-calc(100% - 30px);
+  top: -moz-calc(100% - 30px);
+  top: calc(100% - 30px);
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-25%);
+  -moz-transform: translateX(-25%);
+  -ms-transform: translateX(-25%);
+  transform: translateX(-25%);
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -moz-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  z-index: 350;
+}
+
+.first-screen:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent url("../img/ajax-loader.gif") center center no-repeat;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.first-screen.load {
+  z-index: 350;
+}
+
+.first-screen.load:after {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  top: 0;
+}
+
+.first-screen.loaded:before {
+  opacity: 1;
+  z-index: 400;
 }
 
 .first-screen-inner {
@@ -677,7 +802,7 @@ p {
 
 .first-screen-inner .slogan {
   position: absolute;
-  top: 85%;
+  top: 100%;
   right: 7px;
   color: #a7a7a7;
   font-size: 14px;
@@ -844,8 +969,114 @@ p {
 
 .footer-inner {
   margin: 0 auto;
+  padding: 0 25px;
   max-width: 1360px;
   color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-inner__left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+}
+
+.footer-inner__right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+}
+
+.footer-inner .logo {
+  margin-right: 5%;
+  font-size: 64px;
+}
+
+.footer-inner .logo:hover {
+  text-decoration: none;
+}
+
+.footer-inner .navigation {
+  padding-left: 25%;
+}
+
+.footer-inner .navigation li {
+  display: block;
+}
+
+.footer-inner .navigation li a {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.footer-inner .address {
+  width: 35%;
+}
+
+.footer-inner .address p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-inner .soc-links a:before {
+  color: #ffffff;
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.footer-contacts .contacts-inner {
+  margin-left: 15%;
+  width: 40%;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+}
+
+.footer-contacts a.tel {
+  margin-bottom: 25px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.footer-contacts a.mail {
+  margin-bottom: 35px;
+  display: block;
 }
 
 /*______ SLIDERS ______*/
@@ -864,7 +1095,7 @@ p {
 
 @media (min-width: 960px) {
   .uk-container {
-    padding: 0 15px;
+    padding: 0 25px;
   }
 }
 
