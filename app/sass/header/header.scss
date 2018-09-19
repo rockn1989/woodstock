@@ -4,6 +4,38 @@
 	position: fixed;
 	width: 100%;
 	z-index: 999;
+	transition: all 1s ease;
+	&.small {
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		max-width: 1360px;
+		background-color: #ffffff;
+		.logo {
+			&:before {
+				color: #000000;
+			}
+		}
+		.navigation {
+			a {
+				color: #000000;
+			}
+		}
+		.header-contacts .tel {
+			color: #000000;
+		}
+		.header-inner {
+			padding: 20px 0;
+		}
+		.navigation ul li {
+			margin-right: 5%;
+		}
+		.soc-links {
+			margin-left: 13%;
+			margin-right: auto;
+		}
+	}
+
 }
 
 .header-inner {
@@ -14,6 +46,10 @@
 	align-items: center;
 	.logo {
 		margin-right: 5%;
+		font-size: 64px;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	&__left,&__right {
 		width: 50%;
@@ -40,6 +76,7 @@
 			margin-right: 3%;
 			display: inline-block;
 			vertical-align: top;
+			transition: margin .3s ease;
 			&:before {
 				display: none;
 			}
@@ -62,6 +99,7 @@
 }
 
 .soc-links {
+	transition: margin .3s ease;
 	a {
 		margin-right: 20px;
 		display: inline-block;

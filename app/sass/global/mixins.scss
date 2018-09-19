@@ -3,6 +3,11 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	li {
+		&:before,&:after {
+			display: none;
+		}
+	}
 }
 
 @mixin clearfix() {
