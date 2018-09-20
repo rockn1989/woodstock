@@ -1,1 +1,25 @@
-/*______ FORMS ______*/
+/*______ Forms ______*/
+
+.application-form {
+	margin-top: 6px;
+	margin-left: auto;
+	max-width: 350px;
+	input[type="text"] {
+		margin-bottom: 15px;
+		padding: 0 10px;
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		border: none;
+		border-bottom: 1px solid #979797;
+		background-color: transparent;
+		outline: none;
+	}
+	.btn {
+		margin-top: 20px;
+		width: 100%;
+	}
+	::placeholder {
+		color: #000000
+	}
+}

@@ -79,6 +79,18 @@
 		opacity: 0.85;
 		z-index: -1;
 	}
+	.card {
+		width: 45%;
+		&:nth-child(1n) {
+			float: left;
+		}
+		&:nth-child(2n) {
+			float: right;
+		}
+		&:nth-last-child(-n+2) {
+			margin-bottom: 0;
+		}
+	}
 }
 
 

@@ -4,28 +4,18 @@
 	margin-bottom: 90px;
 	display: inline-block;
 	vertical-align: top;
-	width: 45%;
 	text-align: center;
-	&:nth-child(1n) {
-		float: left;
-	}
-	&:nth-child(2n) {
-		float: right;
-	}
-	&:nth-last-child(-n+2) {
-		margin-bottom: 0;
-	}
 	&__img {
 		margin-bottom: 20px;
 	}
-	&__name {
+	&__name{
 		margin-bottom: 15px;
 		font-size: 28px;
 		line-height: 29px;
 		font-weight: 900;
 		font-family: $titleFont;
 	}
-	&__fabric {
+	&__fabric,&__time  {
 		margin-bottom: 15px;
 		font-size: 14px;
 		line-height: 14px;
