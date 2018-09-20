@@ -1,0 +1,17 @@
+/*______ Detail page ______*/
+
+.detail-product-content {
+	@include clearfix;
+}
+
+
+.detail-product-description {
+	width: 38%;
+	float: right;
+}
+
+.detail-product-sliders {
+	margin-right: 10%;
+	width: 52%;
+	float: left;
+}

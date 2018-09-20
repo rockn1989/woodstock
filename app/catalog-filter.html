@@ -1,7 +1,57 @@
-{% extends "layouts/default.html" %}
-{% set title="Каталог" %}
-{% set small="small" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Каталог</title>
+	<meta property="og:url" content="">
+	<meta property="og:type" content="Article">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="stylesheet" href="libs/uikit-3/css/uikit.min.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lte IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script src="libs/html5shiv.min.js"></script>
+		<script src="libs/placeholders.min.js"></script>
+	<![endif]-->
+</head>
+<body class="">
+<div class="preloader load"></div>
+<header class="header small">
+	<div class="header-inner">
+		<div class="header-inner__left">
+			<a href="/" class="logo icon-logo1 js__preload"></a>
+			<nav class="navigation">
+				<ul>
+					<li><a href="catalog.html" class="js__preload">Каталог</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Идеи для интерьера</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header-inner__right">
+			<div class="soc-links">
+				<a href="" class="icon-vk"></a>
+				<a href="" class="icon-inst"></a>
+				<a href="" class="icon-youtube"></a>
+			</div>
+			<div class="header-contacts">
+				<a href="tel:+74957904431" class="tel">+7 (495) 790-44-31</a>
+				<a href="#callback-modal" class="btn" uk-toggle>Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+</header>
+	
 
 	<div class="content">
 		<div class="uk-container">
@@ -27,10 +77,22 @@
 					<div class="uk-width-3-4">
 						<div class="catalog-content">
 							<div class="catalog-header">
-								<h1>Каталог</h1>
+								<h1>Мебель для гостиной</h1>
+								<div class="catalog-filter" uk-scrollspy="cls:visible;delay: 500">
+									<ul>
+										<li><a href="#" class="active">Тумба под телевизор</a></li>
+										<li><a href="#">Консоль</a></li>
+										<li><a href="#">Письменный стол</a></li>
+										<li><a href="#">Стул</a></li>
+										<li><a href="#">Стелаж</a></li>
+										<li><a href="#">Полки</a></li>
+										<li><a href="#">Кресло</a></li>
+										<li><a href="#">Журнальный столик</a></li>
+									</ul>
+								</div>
 							</div>
-							<div class="catalog-body">
-								<div class="card">
+							<div class="catalog-body" uk-scrollspy="target: .card; cls: uk-invisible uk-animation-scale-up; delay: 300">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-1-380x191.png" alt="">
@@ -42,7 +104,7 @@
 									</div>
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-2-380x191.png" alt="">
@@ -55,7 +117,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-2-380x191.png" alt="">
@@ -68,7 +130,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>								
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-1-380x191.png" alt="">
@@ -81,7 +143,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-1-380x191.png" alt="">
@@ -94,7 +156,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-2-380x191.png" alt="">
@@ -107,7 +169,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>	
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-2-380x191.png" alt="">
@@ -120,7 +182,7 @@
 									<a href="" class="btn btn--think">Подробнее</a>
 								</div>	
 
-								<div class="card">
+								<div class="card uk-invisible">
 									<div class="card__img">
 										<a href="">
 											<img src="img/catalog-img-1-380x191.png" alt="">
@@ -145,4 +207,65 @@
 
 		</div>
 	</div>
-{% endblock %}
+
+
+<footer class="footer">
+	<div class="footer-inner">
+		<div class="footer-inner__left">
+			<a href="/" class="logo icon-logo1"></a>
+			<nav class="navigation">
+				<ul>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Идеи для интерьера</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="footer-inner__right">
+			<div class="address">
+				<p>
+					Адрес: Московская область, Истринский р-он, пгт Снегири ул. Станционная д.1
+				</p>
+				<p>
+					ежедневно с 10:00 до 20:00
+				</p>
+			</div>
+			<div class="footer-contacts">
+				<div class="contacts-inner">
+					<a href="tel:+74957904431" class="tel">+7 (495) 790-44-31</a>
+					<a href="mailto:info@woodnstone.ru" class="mail">info@woodnstone.ru</a>
+					<div class="soc-links">
+						<a href="" class="icon-vk"></a>
+						<a href="" class="icon-inst"></a>
+						<a href="" class="icon-youtube"></a>
+					</div>
+				</div>
+				<a href="#callback-modal" class="btn" uk-toggle>Заказать звонок</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+<div id="callback-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"></h2>
+        <button class="uk-modal-close" type="button"></button>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+<script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+<script src="libs/uikit-3/js/uikit.min.js" defer></script>
+<script src="libs/slick/slick.min.js" defer></script>
+<script src="libs/svg4everybody.min.js" defer></script>
+<script src="libs/ofi.min.js" defer></script>
+<script src="js/slider.js" defer></script>
+<script src="js/main.js" defer></script>
+
+</body>
+</html>

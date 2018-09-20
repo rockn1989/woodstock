@@ -407,6 +407,10 @@ p {
 }
 
 .btn--black {
+  height: 58px;
+  line-height: 56px;
+  max-width: 350px;
+  width: 100%;
   font-size: 14px;
   font-weight: 600;
   background-color: #000000;
@@ -425,28 +429,28 @@ p {
 /*______ Preload ______*/
 
 .preloader {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .preloader:after {
   content: '';
   position: absolute;
   left: 0;
-  top: -webkit-calc(100% - 30px);
-  top: -moz-calc(100% - 30px);
-  top: calc(100% - 30px);
+  top: 0;
   width: 100%;
   height: 100%;
   display: block;
   background-color: #ffffff;
-  -webkit-transform: translateX(-25%);
-  -moz-transform: translateX(-25%);
-  -ms-transform: translateX(-25%);
-  transform: translateX(-25%);
-  -webkit-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
-  -o-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
-  -moz-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
-  transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -o-transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+  -moz-transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+  transition: all 1s cubic-bezier(0.55, 0.085, 0, 0.99);
   z-index: 350;
 }
 
@@ -460,26 +464,26 @@ p {
   height: 100%;
   background: transparent url("../img/ajax-loader.gif") center center no-repeat;
   opacity: 0;
-  z-index: -1;
+  z-index: 2;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   -moz-transition: all .5s ease;
   transition: all .5s ease;
 }
 
-.preloader.load {
-  z-index: 350;
+.preloader.loaded {
+  z-index: 401;
 }
 
-.preloader.load:after {
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+.preloader.loaded:after {
+  -webkit-transform: translate(-100%, 100%);
+  -moz-transform: translate(-100%, 100%);
+  -ms-transform: translate(-100%, 100%);
+  transform: translate(-100%, 100%);
   top: 0;
 }
 
-.preloader.loaded:before {
+.preloader.load:before {
   opacity: 1;
   z-index: 400;
 }
@@ -703,7 +707,12 @@ p {
 
 /*______ Page Content ______*/
 
-body.main-page {
+body.load {
+  overflow: hidden;
+}
+
+body.main-page-preloader,
+body.preloader {
   overflow: hidden;
 }
 
@@ -819,24 +828,6 @@ body.main-page {
   transform: rotate(-270deg);
 }
 
-.second-screen {
-  position: relative;
-  z-index: 101;
-  background-color: #ffffff;
-}
-
-.second-screen:before {
-  content: '';
-  position: absolute;
-  top: -30px;
-  left: 0;
-  display: block;
-  height: 30px;
-  width: 100%;
-  max-width: 1030px;
-  background-color: #ffffff;
-}
-
 .catalog-nav ul {
   margin: 0;
   padding: 0;
@@ -888,6 +879,65 @@ body.main-page {
   font-weight: 600;
 }
 
+.catalog-header {
+  margin-top: -8px;
+}
+
+.catalog-filter {
+  -webkit-transition: opacity .6s, visibility .6s, -webkit-transform .6s ease;
+  transition: opacity .6s, visibility .6s, -webkit-transform .6s ease;
+  -o-transition: opacity .6s, visibility .6s, transform .6s ease;
+  -moz-transition: opacity .6s, visibility .6s, transform .6s ease, -moz-transform .6s ease;
+  transition: opacity .6s, visibility .6s, transform .6s ease;
+  transition: opacity .6s, visibility .6s, transform .6s ease, -webkit-transform .6s ease, -moz-transform .6s ease;
+  opacity: 0;
+  visibility: 0;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+
+.catalog-filter ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.catalog-filter ul li:before,
+.catalog-filter ul li:after {
+  display: none;
+}
+
+.catalog-filter ul li {
+  margin-right: 10px;
+  display: inline-block;
+  padding: 0;
+}
+
+.catalog-filter ul li a {
+  color: #b2b2b2;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: .4px;
+  font-weight: 400;
+}
+
+.catalog-filter ul li a.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.catalog-filter.visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
 .catalog-body {
   position: relative;
   margin-bottom: 80px;
@@ -917,6 +967,25 @@ body.main-page {
 
 .seo-text {
   margin-bottom: 120px;
+}
+
+/*______ Detail page ______*/
+
+.detail-product-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.detail-product-description {
+  width: 38%;
+  float: right;
+}
+
+.detail-product-sliders {
+  margin-right: 10%;
+  width: 52%;
+  float: left;
 }
 
 /*______ Catalog card ______*/

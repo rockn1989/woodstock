@@ -23,13 +23,14 @@
 	<![endif]-->
 </head>
 <body class="">
+<div class="preloader load"></div>
 <header class="header small">
 	<div class="header-inner">
 		<div class="header-inner__left">
-			<a href="/" class="logo icon-logo1"></a>
+			<a href="/" class="logo icon-logo1 js__preload"></a>
 			<nav class="navigation">
 				<ul>
-					<li><a href="catalog.html">Каталог</a></li>
+					<li><a href="catalog.html" class="js__preload">Каталог</a></li>
 					<li><a href="#">О нас</a></li>
 					<li><a href="#">Идеи для интерьера</a></li>
 					<li><a href="#">Блог</a></li>
@@ -195,6 +196,7 @@
 		</div>
 	</div>
 
+
 <footer class="footer">
 	<div class="footer-inner">
 		<div class="footer-inner__left">
@@ -234,6 +236,8 @@
 	</div>
 </footer>
 
+
+
 <div id="callback-modal" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
         <h2 class="uk-modal-title"></h2>
@@ -241,12 +245,14 @@
     </div>
 </div>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
 <script src="libs/uikit-3/js/uikit.min.js" defer></script>
 <script src="libs/slick/slick.min.js" defer></script>
 <script src="libs/svg4everybody.min.js" defer></script>
 <script src="libs/ofi.min.js" defer></script>
+<script src="js/slider.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>

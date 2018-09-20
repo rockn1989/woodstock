@@ -1,6 +1,9 @@
 /*______ Page Content ______*/
 body {
-	&.main-page {
+	&.load {
+		overflow: hidden;
+	}
+	&.main-page-preloader,&.preloader {
 		overflow: hidden;
 	}
 }
@@ -89,23 +92,6 @@ body {
 	}
 }
 
-
-.second-screen {
-	position: relative;
-	z-index: 101;
-	background-color: #ffffff;
-	&:before {
-		content: '';
-		position: absolute;
-		top: -30px;
-		left: 0;
-		display: block;
-		height: 30px;
-		width: 100%;
-		max-width: 1030px;
-		background-color: #ffffff;
-	}
-}
 
 .catalog-nav {
 	ul {

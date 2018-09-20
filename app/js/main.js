@@ -108,3 +108,27 @@ $(function () {
 		});		
 	});
 });
+
+$(document).ready(function() {
+	
+	$('.js__preload').on('click', function(e){
+		e.preventDefault();
+		var redirect = $(this).attr('href');
+		$('.preloader').addClass('reload');
+		$('.preloader').on('transitionend', function () {
+			$(this).addClass('loaded');
+			setTimeout(function () {
+				window.location = redirect;
+			}, 1500)
+		});		
+	});
+
+	$('.preloader').removeClass('load');
+	$('.preloader').addClass('loaded');
+	$('.preloader.loaded').on('transitionend', function () {
+		//$('.preloader').css('display','none');
+		$('body').removeClass('load');
+		$('.preloader').remove()
+	});
+	
+});

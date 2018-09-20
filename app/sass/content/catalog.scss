@@ -24,6 +24,41 @@
 	}
 }
 
+.catalog-header {
+	margin-top: -8px;
+}
+
+.catalog-filter {
+	transition: opacity .6s, visibility .6s, transform .6s ease;
+	opacity: 0;
+	visibility: 0;
+	transform: translateY(-20px);
+	ul {
+		@include list-reset;
+		margin-bottom: 30px;
+		li {
+			margin-right: 10px;
+			display: inline-block;
+			padding: 0;
+			a {
+				color: #b2b2b2;
+				font-size: 14px;
+				line-height: 14px;
+				letter-spacing: .4px;
+				font-weight: 400;
+				&.active {
+					color: #000000;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+}
 
 .catalog-body {
 	position: relative;
