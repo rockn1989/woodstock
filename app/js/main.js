@@ -2,6 +2,19 @@
 
 $(function() {	
 
+	/*______ Ленивая загрузка картинок ______*/
+
+	$('.lazy').lazy({
+			// your configuration goes here
+			scrollDirection: 'vertical',
+			effect: 'fadeIn',
+			visibleOnly: true,
+			placeholder: "img/ajax-loader.gif",
+			onError: function(element) {
+					console.log('error loading ' + element.data('src'));
+			}
+	});
+
 	/*______ Показывать форму на мобильных устройствах ______*/
 
 	var $mobileForm = $('.mobile-form');

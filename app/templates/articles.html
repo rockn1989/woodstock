@@ -1,0 +1,140 @@
+{% extends "layouts/default.html" %}
+{% set title="Статьи" %}
+{% set bread=["Главная","Статьи"] %}
+{% set small="small" %}
+{% block content %}
+	<div class="content">
+		<div class="uk-container">
+{% include "includes/breadcrumbs.html" %}
+		
+		<!-- begin articles -->
+		<div class="articles">
+			<h1>Статьи</h1>
+			<div class="uk-grid">
+				<div class="uk-width-1-1 uk-width-3-4@m">
+					<div class="atricles-wrapper">
+						<div class="articles-list"  uk-scrollspy="target: .article-item; cls: uk-invisible uk-animation-scale-up; delay: 300">
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-1-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-1">Сделай сам</div>
+								<div class="article-item__title">
+									Как быстро обновить деревянный столик лофт
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-2-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-2">Идеи для интерьера</div>
+								<div class="article-item__title">
+									Переделка старого комода
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>					
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-1-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-1">Сделай сам</div>
+								<div class="article-item__title">
+									Как быстро обновить деревянный столик лофт
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-2-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-2">Идеи для интерьера</div>
+								<div class="article-item__title">
+									Переделка старого комода
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-1-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-1">Сделай сам</div>
+								<div class="article-item__title">
+									Как быстро обновить деревянный столик лофт
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-2-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-2">Идеи для интерьера</div>
+								<div class="article-item__title">
+									Переделка старого комода
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-1-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-1">Сделай сам</div>
+								<div class="article-item__title">
+									Как быстро обновить деревянный столик лофт
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+							<div class="article-item uk-invisible">
+								<div class="article-item__img">
+									<a href="">
+										<img src="img/articles-img-2-380x270.png" alt="">
+									</a>
+								</div>
+								<div class="article-item__section-name" data-section="sectoin-2">Идеи для интерьера</div>
+								<div class="article-item__title">
+									Переделка старого комода
+								</div>
+								<a href="" class="btn btn--think">Подробнее</a>
+							</div>
+						
+						</div>
+						<div class="seo-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis mollis bibendum. Ut dictum odio ipsum, ac suscipit elit pharetra eget. Cras  ipsum, blandit eget egestas id, eleifend ut elit. Vestibulum consectetur orci eros, ut vulputate magna mollis a. Vestibulum accumsan neque eget tellus pellentesque, eu eleifend nisi egestas. Vivamus sagittis turpis et dui molestie, non tempor justo tincidunt. Morbi ut sapien venenatis, accumsan nunc eu, rhoncus eros. In euismod nibh quis pellentesque ultrices. Pellentesque consectetur rhoncus mauris sit amet egestas.
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-1 uk-width-1-4@m">
+					<div class="articles-nav" uk-sticky="offset: 110; bottom: .articles">
+						<ul class="nav-list">
+							<li><a href="#" class="active">Все статьи</a></li>
+							<li><a href="#">Идеи для интерьера</a></li>
+							<li><a href="#">Сделай сам</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end articles -->
+
+		</div>
+	</div>
+{% endblock %}

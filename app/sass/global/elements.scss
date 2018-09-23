@@ -1,6 +1,7 @@
 /*______ Elements ______*/
 
 h1, .title-h1 {
+	margin-bottom: 50px;
 	color: $mainColor;
 	font-size: 64px;
 	line-height: 72px;
@@ -9,6 +10,7 @@ h1, .title-h1 {
 }
 
 h2, .title-h2 {
+	margin-bottom: 20px;
 	color: $mainColor;
 	font-size: 36px;
 	line-height: 42px;
@@ -17,6 +19,7 @@ h2, .title-h2 {
 }
 
 h3, .title-h3 {
+	margin-bottom: 15px;
 	color: $mainColor;
 	font-size: 28px;
 	line-height: 29px;
@@ -25,6 +28,7 @@ h3, .title-h3 {
 }
 
 h4, .title-h4 {
+	margin-bottom: 15px;
 	color: $mainColor;
 	font-size: 24px;
 	line-height: 29px;
@@ -33,8 +37,9 @@ h4, .title-h4 {
 }
 
 .small-title {
+	margin-bottom: 50px;
 	font-size: 21px;
-	line-height: 300px;
+	line-height: 30px;
 	font-weight: 500;
 }
 
