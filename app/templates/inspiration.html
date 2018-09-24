@@ -1,0 +1,40 @@
+{% extends "layouts/default.html" %}
+{% set title="Идеи для вдохновения" %}
+{% set bread=["Главная","Идеи для вдохновения"] %}
+{% set small="small" %}
+{% block content %}
+
+<div class="content">
+	<div class="uk-container">
+{% include "includes/breadcrumbs.html" %}
+		<h1>Идеи для вдохновения</h1>
+		<div class="catalog-filter" uk-scrollspy="cls:visible;delay: 500">
+			<ul>
+				<li><a href="#" class="active">Смотреть все</a></li>
+				<li><a href="#">Гостиная</a></li>
+				<li><a href="#">Спальня</a></li>
+				<li><a href="#">Кухня</a></li>
+				<li><a href="#">Ванная комната</a></li>
+				<li><a href="#">Коридор</a></li>
+				<li><a href="#">Лестницы</a></li>
+				<li><a href="#">Предметы интерьера</a></li>
+			</ul>
+		</div>
+		<ol>
+					<li>lorem-5</li>
+					<li>lorem-5</li>
+					<li>lorem-5</li>
+					<li>lorem-5</li>
+					<li>lorem-5</li>
+				</ol>		
+		<div class="inspiration-list  uk-child-width-1-1@xs uk-child-width-1-3@s uk-child-width-1-4@m" uk-grid="masonry: true;">
+			{% for i in 1..12 %}
+				<a href="#inspiration-modal" uk-toggle>
+					<img data-src="img/inspiration-img-{{i}}.png" class="lazy" alt="">
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

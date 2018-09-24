@@ -5,7 +5,7 @@
 	list-style: none;
 	li {
 		&:before,&:after {
-			display: none;
+			content: '';
 		}
 	}
 }

@@ -87,19 +87,3 @@
 		}
 	}
 }
-
-
-.article {
-	margin-bottom: 50px;
-	&__inner {
-		@media (min-width: $tablet-w) {
-			padding-right: 12.5%;
-		};
-	}
-	img {
-		margin-bottom: 30px;
-		&+img {
-			margin-top: 30px;
-		}
-	}
-}

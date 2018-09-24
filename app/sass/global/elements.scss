@@ -1,7 +1,7 @@
 /*______ Elements ______*/
 
 h1, .title-h1 {
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 	color: $mainColor;
 	font-size: 64px;
 	line-height: 72px;
@@ -43,6 +43,11 @@ h4, .title-h4 {
 	font-weight: 500;
 }
 
+.padding-top-big {
+	padding-top: 180px !important;
+}
+
+
 ul,ol {
 	@include list-reset;
 	margin: 20px 0 30px;
@@ -78,13 +83,17 @@ ul {
 ol {
 	counter-reset: section;
 	li {
+		position: relative;
 		&:before {
-			counter-increment: section;
 			content: counter(section)".";
+			counter-increment: section;
 			position: absolute;
 			top: 0;
 			left: 0;
-			color: #d8b57b;
+			color: #bea67c;
+			font-size: 16px;
+			width: auto;
+			height: auto;
 		}
 	}
 }
@@ -271,6 +280,10 @@ a.return {
 
 
 /*______ Breadcrumbs ______*/
+
+.breadcrumbs-wrapper {
+	margin-bottom: 20px;
+}
 
 .breadcrumbs {
 	@include list-reset;

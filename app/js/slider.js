@@ -90,4 +90,20 @@ $(function () {
 	]
 	});
 
+
+	 /*______ Modal slider ______*/
+
+
+	 UIkit.util.on(document, 'show', '#inspiration-modal', function() {
+	 	$('.modal-slider .slider').slick({
+	 		slidesToShow: 1,
+	 		arrows: true,
+	 		variableHeight: true
+	 	});
+	 });
+
+	 UIkit.util.on(document, 'hide', '#inspiration-modal', function() {
+	 	$('.modal-slider .slider').slick('unslick');
+	 });
+
 });

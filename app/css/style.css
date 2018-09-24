@@ -193,7 +193,7 @@ html.uk-touch body *.uk-invisible {
 
 h1,
 .title-h1 {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   color: #000000;
   font-size: 64px;
   line-height: 72px;
@@ -238,6 +238,10 @@ h4,
   font-weight: 500;
 }
 
+.padding-top-big {
+  padding-top: 180px !important;
+}
+
 ul,
 ol {
   margin: 0;
@@ -255,7 +259,7 @@ ul li:before,
 ul li:after,
 ol li:before,
 ol li:after {
-  display: none;
+  content: '';
 }
 
 ul li,
@@ -286,13 +290,20 @@ ol {
   counter-reset: section;
 }
 
+ol li {
+  position: relative;
+}
+
 ol li:before {
-  counter-increment: section;
   content: counter(section) ".";
+  counter-increment: section;
   position: absolute;
   top: 0;
   left: 0;
-  color: #d8b57b;
+  color: #bea67c;
+  font-size: 16px;
+  width: auto;
+  height: auto;
 }
 
 blockquote {
@@ -517,6 +528,10 @@ a.return:before {
 
 /*______ Breadcrumbs ______*/
 
+.breadcrumbs-wrapper {
+  margin-bottom: 20px;
+}
+
 .breadcrumbs {
   margin: 0;
   padding: 0;
@@ -525,7 +540,7 @@ a.return:before {
 
 .breadcrumbs li:before,
 .breadcrumbs li:after {
-  display: none;
+  content: '';
 }
 
 .breadcrumbs li {
@@ -569,7 +584,7 @@ a.return:before {
 
 .tabs ul li:before,
 .tabs ul li:after {
-  display: none;
+  content: '';
 }
 
 .tabs ul li {
@@ -732,7 +747,7 @@ a.return:before {
 
 .navigation ul li:before,
 .navigation ul li:after {
-  display: none;
+  content: '';
 }
 
 .navigation ul li {
@@ -965,7 +980,7 @@ body.preloader {
 
 .catalog-nav ul li:before,
 .catalog-nav ul li:after {
-  display: none;
+  content: '';
 }
 
 .slideUp {
@@ -982,7 +997,7 @@ body.preloader {
 }
 
 .content {
-  padding-top: 180px;
+  padding-top: 140px;
 }
 
 /*______ Catalog ______*/
@@ -1036,7 +1051,7 @@ body.preloader {
 
 .catalog-filter ul li:before,
 .catalog-filter ul li:after {
-  display: none;
+  content: '';
 }
 
 .catalog-filter ul li {
@@ -1440,15 +1455,13 @@ body.preloader {
   font-weight: 600;
 }
 
-.article {
-  margin-bottom: 50px;
-}
+/*______ Text page ______*/
 
-.article img {
+.text-page img {
   margin-bottom: 30px;
 }
 
-.article img + img {
+.text-page img + img {
   margin-top: 30px;
 }
 
@@ -1621,6 +1634,26 @@ body.preloader {
 
 /*______ MODALS WINDOWS ______*/
 
+.inspiration-modal .uk-modal-dialog {
+  width: 792px;
+}
+
+.inspiration-modal .uk-modal-body {
+  padding: 0;
+}
+
+.inspiration-modal .uk-modal-body .img img {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.inspiration-modal .uk-modal-body .desc {
+  padding-left: 20px;
+}
+
 /*______ Forms ______*/
 
 .application-form {
@@ -1682,13 +1715,15 @@ body.preloader {
   }
 }
 
+@media (min-width: 480px) {
+  .text-page {
+    margin-bottom: 50px !important;
+  }
+}
+
 @media (min-width: 768px) {
   .atricles-wrapper {
     padding-right: 2.5%;
-  }
-
-  .article__inner {
-    padding-right: 12.5%;
   }
 }
 
@@ -1699,6 +1734,11 @@ body.preloader {
 
   .stages-description__inner:after {
     display: block;
+  }
+
+  .text-page {
+    margin-bottom: 100px !important;
+    width: 65%;
   }
 }
 

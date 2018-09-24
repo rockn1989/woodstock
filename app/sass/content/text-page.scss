@@ -1,0 +1,17 @@
+/*______ Text page ______*/
+
+.text-page {
+	@media (min-width: $mob-s) {
+		margin-bottom: 50px !important;
+	};
+	@media (min-width: $desk-w) {
+		margin-bottom: 100px !important;
+		width: 65%;
+	};
+	img {
+		margin-bottom: 30px;
+		&+img {
+			margin-top: 30px;
+		}
+	}
+}

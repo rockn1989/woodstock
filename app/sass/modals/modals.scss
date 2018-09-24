@@ -1,1 +1,22 @@
 /*______ MODALS WINDOWS ______*/
+
+
+.inspiration-modal {
+	.uk-modal-dialog {
+		width: 792px;
+	}
+	.uk-modal-body {
+		padding: 0;
+		.img {
+			img {
+				display: inline;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.desc {
+			padding-left: 20px;
+		}
+	}
+}
