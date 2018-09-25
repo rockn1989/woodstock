@@ -2,8 +2,14 @@
 
 
 .inspiration-modal {
+	&.uk-open {
+		.uk-modal-dialog {
+			transform: scale(1);
+		}
+	}
 	.uk-modal-dialog {
 		width: 792px;
+		transform: scale(.6);
 	}
 	.uk-modal-body {
 		padding: 0;
@@ -16,7 +22,10 @@
 			}
 		}
 		.desc {
-			padding-left: 20px;
+			padding: 30px 50px;
+		}
+		ul,ol {
+			margin-bottom: 60px;
 		}
 	}
 }
