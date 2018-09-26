@@ -2,14 +2,15 @@
 
 
 .inspiration-modal {
+	display: none;
 	&.uk-open {
 		.uk-modal-dialog {
-			transform: scale(1);
+			//transform: scale(1);
 		}
 	}
 	.uk-modal-dialog {
-		width: 792px;
-		transform: scale(.6);
+		//width: 792px;
+		//transform: scale(.6);
 	}
 	.uk-modal-body {
 		padding: 0;
@@ -27,5 +28,27 @@
 		ul,ol {
 			margin-bottom: 60px;
 		}
+	}
+}
+
+
+#fancybox-left span {
+	left: 20px;
+}
+
+#fancybox-right span {
+	right: 20px;
+	left: auto;
+}
+
+#fancybox-wrap {
+	padding: 0;
+}
+
+#fancybox-content {
+	//width: 100% !important;
+	//height: 100% !important;
+	.inspiration-modal {
+		display: block;
 	}
 }

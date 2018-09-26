@@ -295,7 +295,7 @@ ol li {
 }
 
 ol li:before {
-  content: counter(section) ".";
+  content: "0" counter(section);
   counter-increment: section;
   position: absolute;
   top: 0;
@@ -304,6 +304,8 @@ ol li:before {
   font-size: 16px;
   width: auto;
   height: auto;
+  font-family: "PlayfairDisplay";
+  font-weight: 700;
 }
 
 blockquote {
@@ -1079,6 +1081,12 @@ body.preloader {
   padding-top: 140px;
 }
 
+/*______ Inspiration List ______*/
+
+.inspiration-list {
+  margin-bottom: 90px !important;
+}
+
 /*______ Catalog ______*/
 
 .catalog-nav .nav-list li {
@@ -1658,19 +1666,8 @@ body.preloader {
 
 /*______ MODALS WINDOWS ______*/
 
-.inspiration-modal.uk-open .uk-modal-dialog {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.inspiration-modal .uk-modal-dialog {
-  width: 792px;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  transform: scale(0.6);
+.inspiration-modal {
+  display: none;
 }
 
 .inspiration-modal .uk-modal-body {
@@ -1692,6 +1689,23 @@ body.preloader {
 .inspiration-modal .uk-modal-body ul,
 .inspiration-modal .uk-modal-body ol {
   margin-bottom: 60px;
+}
+
+#fancybox-left span {
+  left: 20px;
+}
+
+#fancybox-right span {
+  right: 20px;
+  left: auto;
+}
+
+#fancybox-wrap {
+  padding: 0;
+}
+
+#fancybox-content .inspiration-modal {
+  display: block;
 }
 
 /*______ Forms ______*/

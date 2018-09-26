@@ -85,7 +85,7 @@ ol {
 	li {
 		position: relative;
 		&:before {
-			content: counter(section)".";
+			content: "0"counter(section);
 			counter-increment: section;
 			position: absolute;
 			top: 0;
@@ -94,6 +94,8 @@ ol {
 			font-size: 16px;
 			width: auto;
 			height: auto;
+			font-family: $titleFont;
+			font-weight: 700;
 		}
 	}
 }

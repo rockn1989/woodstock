@@ -2,6 +2,33 @@
 
 $(function() {	
 
+	/*______ Fancybox ______*/
+
+$('a.insp-group').click(function() {
+    
+    $.fancybox.open( $('.inspiration-modal').get(), {
+        'type':'inline',
+        'overlayShow': true,
+        'overlayOpacity': 0.7,
+        'overlayColor': '#666',
+        'overlayColor': '#666',
+        'showNavArrows': true,
+        'titleShow': false
+    });
+});
+
+
+/*	$('a.insp-group').fancybox({
+		'type' : 'inline',
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	true,
+		'showNavArrows': true
+	});*/
+
+
 	/*______ Ленивая загрузка картинок ______*/
 
 	$('.lazy').lazy({
