@@ -115,4 +115,21 @@ body {
 
 .inspiration-list {
 	margin-bottom: 90px !important;
+	a.insp-group {
+		@media (min-width: $mob-xs) {
+			text-align: center;
+		};
+		@media (min-width: $tablet-w) {
+			text-align: left;
+		};
+	}
 }
+
+/* h1,
+.header,
+.filter,
+.footer {
+	display: none;
+}
+
+ */

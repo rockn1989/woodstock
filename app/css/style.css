@@ -1087,6 +1087,15 @@ body.preloader {
   margin-bottom: 90px !important;
 }
 
+/* h1,
+.header,
+.filter,
+.footer {
+	display: none;
+}
+
+ */
+
 /*______ Catalog ______*/
 
 .catalog-nav .nav-list li {
@@ -1666,15 +1675,23 @@ body.preloader {
 
 /*______ MODALS WINDOWS ______*/
 
+.fancybox-content {
+  background-color: transparent;
+}
+
 .inspiration-modal {
+  padding: 0;
+  width: 792px;
+  max-height: 650px;
   display: none;
 }
 
-.inspiration-modal .uk-modal-body {
-  padding: 0;
+.inspiration-modal .slide {
+  margin: 0 auto;
+  background: #ffffff;
 }
 
-.inspiration-modal .uk-modal-body .img img {
+.inspiration-modal .img img {
   display: inline;
   width: 100%;
   height: 100%;
@@ -1682,13 +1699,23 @@ body.preloader {
   object-fit: cover;
 }
 
-.inspiration-modal .uk-modal-body .desc {
-  padding: 30px 50px;
+.inspiration-modal .desc .application-form {
+  margin-left: 0;
 }
 
-.inspiration-modal .uk-modal-body ul,
-.inspiration-modal .uk-modal-body ol {
+.inspiration-modal ul,
+.inspiration-modal ol {
   margin-bottom: 60px;
+}
+
+.inspiration-modal ul li,
+.inspiration-modal ol li {
+  padding-left: 45px;
+}
+
+.inspiration-modal ol li:before {
+  font-size: 21px;
+  line-height: 17px;
 }
 
 #fancybox-left span {
@@ -1704,8 +1731,56 @@ body.preloader {
   padding: 0;
 }
 
-#fancybox-content .inspiration-modal {
-  display: block;
+.fancybox-navigation .fancybox-button--arrow_left,
+.fancybox-navigation .fancybox-button--arrow_right {
+  padding: 0;
+  width: auto;
+  height: 60px;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 60px;
+  color: #ffffff;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left div,
+.fancybox-navigation .fancybox-button--arrow_left svg,
+.fancybox-navigation .fancybox-button--arrow_right div,
+.fancybox-navigation .fancybox-button--arrow_right svg {
+  display: none;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left[disabled]:before,
+.fancybox-navigation .fancybox-button--arrow_right[disabled]:before {
+  color: #d3d3d3;
+}
+
+.fancybox-navigation .fancybox-button--arrow_left:before {
+  content: "\e901";
+  color: #d8b57b;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right {
+  right: 17px;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right:before {
+  content: "\e900";
+  color: #d8b57b;
+}
+
+.fancybox-button svg {
+  color: #ffffff;
 }
 
 /*______ Forms ______*/
@@ -1764,8 +1839,26 @@ body.preloader {
     animation: none;
   }
 
+  .inspiration-list a.insp-group {
+    text-align: center;
+  }
+
   .stages-description__inner:after {
     display: none;
+  }
+
+  .inspiration-modal .img {
+    height: 250px;
+  }
+
+  .inspiration-modal .desc {
+    height: auto;
+    padding: 30px 55px 30px 45px;
+  }
+
+  .fancybox-navigation .fancybox-button--arrow_left,
+  .fancybox-navigation .fancybox-button--arrow_right {
+    font-size: 40px;
   }
 }
 
@@ -1773,11 +1866,36 @@ body.preloader {
   .text-page {
     margin-bottom: 50px !important;
   }
+
+  .inspiration-modal .slide {
+    max-width: 450px;
+  }
 }
 
 @media (min-width: 768px) {
+  .inspiration-list a.insp-group {
+    text-align: left;
+  }
+
   .atricles-wrapper {
     padding-right: 2.5%;
+  }
+
+  .inspiration-modal .slide {
+    max-width: 100%;
+  }
+
+  .inspiration-modal .img {
+    height: auto;
+  }
+
+  .inspiration-modal .desc {
+    padding: 30px 6.1%;
+  }
+
+  .fancybox-navigation .fancybox-button--arrow_left,
+  .fancybox-navigation .fancybox-button--arrow_right {
+    font-size: 60px;
   }
 }
 
@@ -1793,6 +1911,10 @@ body.preloader {
   .text-page {
     margin-bottom: 100px !important;
     width: 65%;
+  }
+
+  .fancybox-button svg {
+    color: #000000;
   }
 }
 
