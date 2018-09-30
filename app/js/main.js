@@ -198,7 +198,7 @@ $(document).ready(function() {
 		}
 
 		setTimeout(function () {
-			$('body').removeClass('loading')
-		}, 300);
+			$('body').removeClass('loading');
+		}, 1000);
 
 });

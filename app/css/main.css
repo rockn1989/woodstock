@@ -675,7 +675,7 @@ body.main-page {
   -o-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
   -moz-transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
   transition: all 0.5s cubic-bezier(0.55, 0.085, 0, 0.99);
-  z-index: 992;
+  z-index: 1005;
 }
 
 .preloader .icon-preloader {
