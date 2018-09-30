@@ -11,7 +11,7 @@
 		<div class="articles">
 			<h1>Статьи</h1>
 			<div class="uk-grid">
-				<div class="uk-width-1-1 uk-width-3-4@m">
+				<div class="uk-width-1-1 uk-width-3-4@l uk-flex-first@l uk-flex-last@s">
 					<div class="atricles-wrapper">
 						<div class="articles-list"  uk-scrollspy="target: .article-item; cls: uk-invisible uk-animation-scale-up; delay: 300">
 							<div class="article-item uk-invisible">
@@ -122,13 +122,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-width-1-1 uk-width-1-4@m">
-					<div class="articles-nav" uk-sticky="offset: 110; bottom: .articles">
-						<ul class="nav-list">
-							<li><a href="#" class="active">Все статьи</a></li>
-							<li><a href="#">Идеи для интерьера</a></li>
-							<li><a href="#">Сделай сам</a></li>
-						</ul>
+				<div class="uk-width-1-1 uk-width-1-4@l">
+					<div class="articles-nav__inner">
+						<div class="articles-nav" uk-sticky="offset: 110; bottom: .articles; media: 960">
+							<a href="" class="articles-nav-title js__toggle-nav icon-arrow-right uk-hidden@l">Список статей</a>
+							<ul class="nav-list">
+								<li><a href="#" class="active">Все статьи</a></li>
+								<li><a href="#">Идеи для интерьера</a></li>
+								<li><a href="#">Сделай сам</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

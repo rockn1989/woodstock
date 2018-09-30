@@ -2,11 +2,27 @@
 
 .products-slider {
 	.title-h2 {
-		padding-left: 8.5%;
+		@media (min-width: $mob-xs) {
+			padding-left: 0;
+		}
+		@media (min-width: $tablet-w) {
+			padding-left: 8.5%;
+		};
 	}
 	.slider {
 		margin: 50px 0 110px;
-		padding: 0 8.5%;
+		@media (min-width: $mob-xs) {
+			padding: 0;
+		}
+		@media (min-width: $tablet-w) {
+			padding: 0 8.5%;
+		};
+		.slick-list {
+			margin: 0 -15px;
+		}
+		.slide {
+			margin: 0 15px;
+		}
 		.slick-prev,.slick-next {
 			width: auto;
 			height: auto;

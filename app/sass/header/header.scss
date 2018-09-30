@@ -135,5 +135,147 @@
 	}
 	.btn {
 		margin-left: 50px;
+		@media (min-width: 960px) {
+			margin-left: 10px;
+		}
+		@media (min-width: 1200px) {
+			margin-left: 50px;
+		}
+	}
+}
+
+
+/*______ Mobile header ______*/
+
+.header-mobile {
+	&__inner {
+		padding: 30px 0;
+		border-bottom: 2px solid #ffffff;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.mobile-wrapper {
+	text-align: left;
+	line-height: 65px;
+}
+
+.logo-wrapper {
+	text-align: center;
+	a {
+		font-size: 64px;
+	}
+}
+
+.mobile-menu  {
+	padding-top: 20px;
+	font-size: 23px;
+	display: inline-block;
+}
+
+.tel-wrapper {
+	padding-top: 15px;
+	text-align: right;
+}
+
+.mobile-tel {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	font-size: 20px;
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+
+.uk-offcanvas-bar {
+	ul {
+		@include list-reset;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+	li {
+		margin-bottom: 0;
+		padding-left: 0;
+		list-style: none;
+		opacity: 0;
+		transform: translateX(-100%);
+		animation-duration: .6s;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
+		&:nth-child(1) {
+			animation-delay: 0;
+		}
+		&:nth-child(2) {
+			animation-delay: .2s;
+		}
+		&:nth-child(3) {
+			animation-delay: .6s;
+		}
+		&:nth-child(4) {
+			animation-delay: .8s;
+		}
+		&:nth-child(5) {
+			animation-delay: 1s;
+		}
+		&:before,&:after {
+			display: none;
+		}
+	}
+}
+
+.uk-offcanvas.uk-open {
+	ul.uk-nav {
+		li {
+			animation-name: list-slide-left;
+		}
+	}
+}
+
+@keyframes list-slide-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0%)
+	}
+}
+
+
+.header.small {
+	z-index: 900;
+	.header-mobile {
+		background-color: #ffffff;
+		a {
+			&:before {
+				color: #000000
+			}
+		}
+		.header-mobile__inner {
+			padding: 10px 0;
+			border-bottom-color: #000000;
+		}
+		.mobile-tel {
+			background-color: #000000;
+			&:before {
+				color: #ffffff;
+			}
+		}
+	}
+	.soc-links {
+		@media (min-width: $desk-w) {
+			margin-left: 5%;
+		};
+		@media (min-width: 1300px) {
+			margin-left: 13%;
+		}
 	}
 }

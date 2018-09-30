@@ -1,8 +1,21 @@
 {% block content %}
-<div id="callback-modal" uk-modal>
+<div id="callback-modal" class="default-modal" uk-modal>
     <div class="uk-modal-dialog uk-modal-body">
-        <h2 class="uk-modal-title"></h2>
-        <button class="uk-modal-close" type="button"></button>
+    	<button type="button" class="uk-modal-close-default icon-close uk-close" uk-close>
+    	</button>
+        <div class="title-h2">Оставить заявку</div>
+				<form action="" class="application-form">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Номер телефона" class="js__input-phone">
+					<button type="submit" class="btn">Отправить</button>
+					<label for="politics">
+						<input id="politics" type="checkbox">
+						<span class="custom-checkbox"></span>
+						<span class="custom-label">
+							Я ознакомлен и согласен с условиями обработки данных
+						</span>
+					</label>
+				</form>
     </div>
 </div>
 

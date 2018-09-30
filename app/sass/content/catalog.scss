@@ -1,6 +1,7 @@
 /*______ Catalog ______*/
 
 .catalog-nav {
+	z-index: 500;
 	.nav-list {
 		li {
 			margin-bottom: 10px;
@@ -22,17 +23,77 @@
 			}
 		}
 	}
+	&__inner {
+		position: relative;
+		margin-bottom: 50px;
+		.nav-list {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding: 15px 10px 0;
+			width: 100%;
+			display: none;
+			background-color: #ffffff;
+			border: 2px solid #d8b57b;
+			border-top: none;
+			z-index: 250;
+		}
+		@media (min-width: $desk-w) {
+			margin-bottom: 0;
+			padding: 0;
+			.nav-list {
+				padding: 0;
+				border: none;
+				display: block !important;
+				background-color: transparent;
+			}
+		};
+	}
+}
+
+.catalog-nav-title {
+	padding: 12px 10px;
+	border: 2px solid #d8b57b;
+	display: block;
+	color: $mainColor;
+	font-size: 18px;
+	font-family: $mainFont !important;
+	font-weight: 500;
+	&:hover,&:focus {
+		text-decoration: none;
+		color: #000000;
+	}
+	&:before {
+		position: absolute;
+		top: 14px;
+		right: 8px;
+		font-family: 'icomoon' !important;
+		transition: transform .3s ease;
+	}
+	&.open {
+		color: #000000;
+		border-bottom: 0;
+		&:before {
+			transform: rotate(90deg);
+		}
+	}
 }
 
 .catalog-header {
+	position: relative;
 	margin-top: -8px;
 }
 
 .catalog-body {
 	position: relative;
-	margin-bottom: 80px;
 	font-size: 0;
 	@include clearfix;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 30px;
+	}
+	@media (min-width: $tablet-w) {
+		margin-bottom: 80px;
+	};
 	&:before {
 		content: '';
 		position: absolute;
@@ -48,16 +109,24 @@
 		z-index: -1;
 	}
 	.card {
-		width: 45%;
 		&:nth-child(1n) {
 			float: left;
 		}
 		&:nth-child(2n) {
 			float: right;
 		}
-		&:nth-last-child(-n+2) {
-			margin-bottom: 0;
+		@media (min-width: $mob-xs) {
+			width: 100%;
+			&:nth-last-child(-n+2) {
+				margin-bottom: 90px;
+			}
 		}
+		@media (min-width: $mob-s) {
+			width: 45%;
+			&:nth-last-child(-n+2) {
+				margin-bottom: 0;
+			}
+		};
 	}
 }
 

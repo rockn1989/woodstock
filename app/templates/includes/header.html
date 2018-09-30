@@ -1,14 +1,14 @@
 {% block content %}
 <header class="header {{small}}">
-	<div class="header-inner">
+	<div class="header-inner uk-visible@l">
 		<div class="header-inner__left">
-			<a href="/" class="logo icon-logo1 js__preload"></a>
+			<a href="index.html" class="logo icon-logo1 js__page-leave"></a>
 			<nav class="navigation">
 				<ul>
-					<li><a href="catalog.html" class="js__preload">Каталог</a></li>
-					<li><a href="#">О нас</a></li>
-					<li><a href="#">Идеи для интерьера</a></li>
-					<li><a href="#">Блог</a></li>
+					<li><a href="catalog.html" class="js__page-leave">Каталог</a></li>
+					<li><a href="about-us.html" class="js__page-leave">О нас</a></li>
+					<li><a href="inspiration.html" class="js__page-leave">Идеи для интерьера</a></li>
+					<li><a href="articles.html" class="js__page-leave">Блог</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -25,5 +25,44 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- begin header-mobile -->
+	<div class="header-mobile uk-hidden@l">
+			<div class="uk-container">
+				<div class="header-mobile__inner">
+					<div class="uk-grid uk-child-width-1-3">
+						<div class="menu-wrapper">
+							<a href="#offcanvas-menu" class="icon-menu mobile-menu" uk-toggle></a>
+						</div>
+						<div class="logo-wrapper">
+							<a href="/" class="icon-logo1"></a>
+						</div>
+						<div class="tel-wrapper">
+							<a href="#callback-modal" class="icon-tel mobile-tel" uk-toggle></a>
+						</div>
+					</div>
+				</div>
+				<div id="offcanvas-menu" uk-offcanvas>
+					<div class="uk-offcanvas-bar">
+						<div class="uk-panel">
+							<ul class="uk-nav">
+								<li><a href="catalog.html">Каталог</a></li>
+								<li><a href="about-us.html">О нас</a></li>
+								<li><a href="inspiration.html">Идеи для интерьера</a></li>
+								<li><a href="articles.html">Блог</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+							<div class="soc-links">
+								<a href="" class="icon-vk"></a>
+								<a href="" class="icon-inst"></a>
+								<a href="" class="icon-youtube"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- end header-mobile -->
+
 </header>
 {% endblock %}

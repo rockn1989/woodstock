@@ -1,7 +1,10 @@
 {% extends "layouts/default.html" %}
 {% set title="Главная" %}
-{% set load="load" %}
+{% set mainPage="main-page" %}
 {% block content %}
+	<video loop="true" autoplay="" class="video-banner uk-visible@l" preload="metadata">
+		<source src="img/woodstone.mp4" type="video/mp4">
+	</video>
 	<div class="screens-wrapper">
 		<section class="first-screen"> 
 			<div class="first-screen-inner">
@@ -9,10 +12,7 @@
 				<div class="slogan">
 					ЭКСКЛЮЗИВНАЯ МЕБЕЛЬ ИЗ ДЕРЕВА И МЕТАЛА
 				</div>
-				<a href="catalog.html" class="btn btn--think js-test">Каталог изделий</a>
-<!-- 				<span class="arrow-down">
-	<img src="img/long-arrow-down.svg" alt="">
-</span> -->
+				<a href="catalog.html" class="btn btn--think js__page-leave">Каталог изделий</a>
 			</div>
 		</section>
 	</div>

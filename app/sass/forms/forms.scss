@@ -4,6 +4,12 @@
 	margin-top: 6px;
 	margin-left: auto;
 	max-width: 350px;
+	@media (min-width: $mob-xs) {
+		max-width: none;
+	}
+	@media (min-width: $desk-w) {
+		max-width: 350px;
+	};
 	input[type="text"] {
 		margin-bottom: 15px;
 		padding: 0 10px;
@@ -18,8 +24,59 @@
 	.btn {
 		margin-top: 20px;
 		width: 100%;
+		@media (min-width: $mob-xs) {
+			max-width: 300px;
+			display: block;
+			margin: 20px auto;
+		}
 	}
 	::placeholder {
 		color: #000000
 	}
+}
+
+
+label {
+	margin-top: 25px;
+	display: block;
+	cursor: pointer;
+	input[type="checkbox"] {
+		display: none;
+		&:checked ~.custom-checkbox {
+			&:after {
+				border-color: #d8b57b;
+				transform: rotate(45deg) scale(1);
+			}
+		}
+	}
+}
+
+.custom-checkbox {
+	position: relative;
+	margin-right: 12px;
+	width: 20px;
+	height: 20px;
+	float: left;
+	border: 1px solid #d8b57b;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 7px;
+		top: 3px;
+		width: 3px;
+		height: 9px;
+		border-bottom: 1px solid transparent;
+		border-right: 1px solid transparent;
+		transform: rotate(45deg) scale(0);
+		transition: all .3s ease;
+	}
+}
+
+.custom-label {
+	display: block;
+	color: #4a4a4a;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	overflow: hidden;
 }
