@@ -1,18 +1,4 @@
 /*______ Page Content ______*/
-body {
-	&.load {
-		overflow: hidden;
-	}
-	&.main-page-preloader,&.preloader {
-		overflow: hidden;
-	}
-	&.mainPage {
-		overflow: hidden;
-		.footer {
-			display: none;
-		}
-	}
-}
 
 .video-banner {
 	position: absolute;
@@ -51,6 +37,7 @@ body {
 		background-size: cover;
 	}
 	@media (min-width: $desk-w) {
+		margin: 0 5%;
 		padding: 0;
 		background: none;
 	};
@@ -62,10 +49,13 @@ body {
 		padding: 40px 0;
 	}
 	@media (min-width: $desk-w) {
-		margin-top: 200px;
-		margin-right: 5%;
-		margin-left: calc(73px + 2.5%);
+		//margin-top: 200px;
+		//margin-right: 5%;
+		//margin-left: calc(73px + 2.5%);
+		//padding-top: 0;
 		padding-top: 0;
+		margin: 200px 0 0;
+		padding-left: -webkit-calc(73px + 2.5%);
 	};
 	@media (min-width: 1400px) {
 		margin-top: 263px;
@@ -110,7 +100,7 @@ body {
 	.slogan {
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 5px;
 		color: $gray;
 		font-size: 14px;
 		line-height: 14px;

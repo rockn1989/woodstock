@@ -40,35 +40,21 @@ $(function() {
 
 	/*______ Fancybox ______*/
 
-/*var inspLinkArray = $('a.insp-group');
+	var inspLinkArray = $('a.insp-group');
 
-$('a.insp-group').click(function() {
+	$('a.insp-group').click(function() {
 
-		var numberOfModal = inspLinkArray.index($(this));
-
-		$.fancybox.open( $('.inspiration-modal').get(numberOfModal), {
-			selector : '.inspiration-modal',
-			'type':'inline',
-			'overlayShow': true,
-			'overlayOpacity': 0.7,
-			'overlayColor': '#666',
-			'showNavArrows': true,
-			'titleShow': false
-		});
-});*/
-
-$.each($('a.insp-group'), function(i, el) {
-	$(el).click(function() {
-		$.fancybox.open( $('.inspiration-modal').get(), {
-			'type':'inline',
-			'overlayShow': true,
-			'overlayOpacity': 0.7,
-			'overlayColor': '#666',
-			'showNavArrows': true,
-			'titleShow': false
-		});
+			$.fancybox.open( $('.inspiration-modal').get(), {
+				selector : '.inspiration-modal',
+				'type':'inline',
+				'overlayShow': true,
+				'overlayOpacity': 0.7,
+				'overlayColor': '#666',
+				'showNavArrows': true,
+				'titleShow': false
+			});
 	});
-})
+
 
 	/*______ Ленивая загрузка картинок ______*/
 
@@ -170,12 +156,10 @@ $.each($('a.insp-group'), function(i, el) {
 	objectFitImages();
 
 
-	/*______ Полифил для SVG ______*/
-
-	/*svg4everebody();*/
-
 });
 
+
+/*______ Запуска анимации ухода со страницы по клику на ссылку ______*/
 
 $(function () {
 	$('.js__page-leave').on('click', function(e){
@@ -191,14 +175,12 @@ $(function () {
 
 $(document).ready(function() {
 
-		if($('body').hasClass('main-page')) {
-			$('.preloader').addClass('diagonale20');
-		} else {
-			$('.preloader').addClass('another-page');
-		}
+		
+
 
 		setTimeout(function () {
 			$('body').removeClass('loading');
+			$('.preloader').addClass('another-page');
 		}, 1000);
 
 });

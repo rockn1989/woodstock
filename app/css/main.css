@@ -867,8 +867,13 @@ body.main-page {
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 1410px;
   background-color: #ffffff;
+  border-bottom: 1px solid #d8b57b;
+}
+
+.header.small .header-inner {
+  margin: 0 auto;
+  max-width: 1210px;
 }
 
 .header.small .logo:before {
@@ -1260,23 +1265,6 @@ body.main-page {
 
 /*______ Page Content ______*/
 
-body.load {
-  overflow: hidden;
-}
-
-body.main-page-preloader,
-body.preloader {
-  overflow: hidden;
-}
-
-body.mainPage {
-  overflow: hidden;
-}
-
-body.mainPage .footer {
-  display: none;
-}
-
 .video-banner {
   position: absolute;
   top: 0;
@@ -1336,7 +1324,7 @@ body.mainPage .footer {
 .first-screen-inner .slogan {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 5px;
   color: #a7a7a7;
   font-size: 14px;
   line-height: 14px;
@@ -1392,6 +1380,13 @@ body.compensate-for-scrollbar {
 }
 
 /*______ Catalog ______*/
+
+.catalog-nav-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10000;
+}
 
 .catalog-nav {
   z-index: 500;
@@ -1974,7 +1969,7 @@ body.compensate-for-scrollbar {
 .footer-inner {
   margin: 0 auto;
   padding: 0 25px;
-  max-width: 1360px;
+  max-width: 1210px;
   color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2657,6 +2652,10 @@ label input[type="checkbox"]:checked ~ .custom-checkbox:after {
     padding-top: 180px !important;
   }
 
+  .header.small .navigation a {
+    font-size: 12px;
+  }
+
   .header-contacts .btn {
     margin-left: 10px;
   }
@@ -2666,17 +2665,15 @@ label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   }
 
   .first-screen {
+    margin: 0 5%;
     padding: 0;
     background: none;
   }
 
   .first-screen-inner {
-    margin-top: 200px;
-    margin-right: 5%;
-    margin-left: -webkit-calc(73px + 2.5%);
-    margin-left: -moz-calc(73px + 2.5%);
-    margin-left: calc(73px + 2.5%);
     padding-top: 0;
+    margin: 200px 0 0;
+    padding-left: -webkit-calc(73px + 2.5%);
   }
 
   .first-screen-inner h1 {
@@ -2698,6 +2695,7 @@ label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   }
 
   .catalog-nav__inner .nav-list {
+    position: static;
     padding: 0;
     border: none;
     display: block !important;
@@ -2768,7 +2766,7 @@ label input[type="checkbox"]:checked ~ .custom-checkbox:after {
   }
 
   .footer-inner .navigation {
-    padding-left: 25%;
+    padding-left: 18.5%;
   }
 
   .footer-inner .address {
