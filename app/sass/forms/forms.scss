@@ -80,3 +80,14 @@ label {
 	line-height: 20px;
 	overflow: hidden;
 }
+
+
+.input-autofocus {
+	position: absolute;
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	line-height: 0 !important;
+	visibility: hidden;
+}

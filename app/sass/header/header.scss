@@ -10,7 +10,9 @@
 		right: 0;
 		margin: 0 auto;
 		background-color: #ffffff;
-		border-bottom: 1px solid #d8b57b;
+		@media (min-width: $desk-w) {
+			border-bottom: 1px solid #d8b57b;
+		};
 		.header-inner {
 			margin: 0 auto;
 			max-width: 1210px;

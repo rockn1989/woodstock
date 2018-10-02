@@ -2,7 +2,15 @@
 
 $(function() {	
 
+	/*______ Окончание загрузки страницы ______*/
 
+	setTimeout(function () {
+		$('body').removeClass('loading');
+		$('.preloader').addClass('another-page');
+	}, 800);
+
+
+	/*______ Preloader для контентных картинок и фонов ______*/
 
 	function preloadImg (targetElement) {
 
@@ -38,6 +46,8 @@ $(function() {
 
 	preloadImg('div.preload');
 
+
+
 	/*______ Fancybox ______*/
 
 	var inspLinkArray = $('a.insp-group');
@@ -53,7 +63,19 @@ $(function() {
 				'showNavArrows': true,
 				'titleShow': false
 			});
+
 	});
+
+	jQuery('input[type=text]').on('autofocus', function (e) {
+		e.preventDefault();
+		return false;
+	});
+
+	/*______ Автопроигрывание видео на главной ______*/
+
+	if($('div').is('#video-banner')) {
+		$("#video-banner")[0].play();
+	}
 
 
 	/*______ Ленивая загрузка картинок ______*/
@@ -155,7 +177,7 @@ $(function() {
 	
 	objectFitImages();
 
-
+	
 });
 
 
@@ -171,16 +193,4 @@ $(function () {
 			window.location = redirect;
 		});		
 	});
-});
-
-$(document).ready(function() {
-
-		
-
-
-		setTimeout(function () {
-			$('body').removeClass('loading');
-			$('.preloader').addClass('another-page');
-		}, 1000);
-
 });
