@@ -1,0 +1,42 @@
+{% extends "layouts/default.html" %}
+{% set title="Контакты" %}
+{% set bread=["Главная","Контакты"] %}
+{% set small="small" %}
+{% block content %}
+
+	<div class="content">
+		<div class="uk-container">
+{% include "includes/breadcrumbs.html" %}
+
+		<!-- begin text-page -->
+		<div class="text-page">
+			<div class="text-page__inner">
+				<h1>Контакты</h1>
+				<p>
+					Тел: <a href="+74957904431">+7 (495) 790-44-31</a><br>
+					E-mail: <a href="mailto:info@woodstone.ru">info@woodstone.ru</a>
+				</p>
+				<p>
+					
+				</p>
+				<div class="soc-links">
+					<a href="" class="icon-vk"></a>
+					<a href="" class="icon-inst"></a>
+					<a href="" class="icon-youtube"></a>
+				</div>
+				<p>
+					ежедневно с 10:00 до 20:00
+				</p>
+				<p>
+					Адрес: Московская область, Истринский р-он,<br>
+					пгт Снегири ул. Станционная д.1
+				</p>
+				<div id="map" class="map"></div>
+			</div>
+		</div>
+		<!-- end text-page -->
+
+		</div>
+	</div>
+
+{% endblock %}

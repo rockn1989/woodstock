@@ -1,7 +1,7 @@
 /*______ Text page ______*/
 
 .text-page {
-	@media (min-width: $mob-s) {
+	@media (min-width: $mob-xs) {
 		margin-bottom: 50px !important;
 	};
 	@media (min-width: $desk-w) {
@@ -12,6 +12,14 @@
 		margin-bottom: 30px;
 		&+img {
 			margin-top: 30px;
+		}
+	}
+	a:not([class]) {
+		color: #000000;
+	}
+	.soc-links {
+		a {
+			font-size: 24px;
 		}
 	}
 }
